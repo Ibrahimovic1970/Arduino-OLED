@@ -1,0 +1,21 @@
+#include <Wire.h>
+#include <Adafruit_SSD1306.h>
+#include <Adafruit_GFX.h>
+
+Adafruit_SSD1306 lcd(120, 64, &Wire, 4);
+
+void setup() {
+  lcd.begin(SSD1306_SWITCHCAPVCC, 0x3c);
+  lcd.clearDisplay();
+}
+
+void loop() {
+  lcd.clearDisplay();
+
+  lcd.setTextSize(2);
+  lcd.setTextColor(WHITE);
+  lcd.setCursor(0, 0);
+  lcd.print("SMK TI BAZMA");
+  lcd.display();
+
+}
